@@ -1,4 +1,4 @@
-# opp_task1
+# o.p.p_task1
  
  Name: tal ornan    i.d:209349356
  
@@ -15,24 +15,20 @@
 
 ### The algorithm:
 Solution :
-In order to solve this assignment I've decided to create the following object
-Building - building is an object with min_floor & max_floor as a field, and a list of Elevator object. this object created by parsing the json bulding. each field have a getter 
+In order to solve this assignment we've decided to create the following object:
+object|Explanation of the object
+--- | --- |
+Building|building is an object with min_floor & max_floor as a field, and a list of Elevator object. this object created by parsing the json bulding. each field have a getter method
+Elevator|this object contains field related to elevator - speed, close/open times and stops time. each field have a getter method
+Call|this object present a single row from the calls.csv field. we've created field for src,dst,time & string object.
+ElevatorCommand|present command for the elevator, what is the next floor the elevator should go
+ElevatorCommands|container for multiple commands. this class also contains method that helps to calcualte the current position of the elevator
+Ex1|simple main that running the algo
 
-##### method
-
-Elevator - this object contains field related to elevator - speed, close/open times and stops time. each field have a getter method
-
-Call - this object present a single row from the calls.csv field. I've created field for src,dst,time & string object.
-
-ElevatorCommand - present command for the elevator, what is the next floor the elevator should go
-
-ElevatorCommands - container for multiple commands. this class also contains method that helps to calcualte the current position of the elevator
-
-Ex1 - simple main that running the algo
 
 ##### Offline algo:
 
-in case thee are two calls that are with the same direcition, and the src & value are very closed, and the number of distanct floor between them is high,
+in case there are two calls that are with the same direcition, and the src & value are very closed, and the number of distanct floor between them is high,
 we will do both calls within the same elevator calls, even if we will have to waite for the second calls
 First step - choose the best elevator for the first call, trying to choose elevator that is idle & the closet to the current position.
     if all the elevator are already assign, we will waite for the first elevator that will be idle/
