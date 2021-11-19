@@ -21,9 +21,13 @@ Building - building is an object with min_floor & max_floor as a field, and a li
 ##### method
 
 Elevator - this object contains field related to elevator - speed, close/open times and stops time. each field have a getter method
+
 Call - this object present a single row from the calls.csv field. I've created field for src,dst,time & string object.
+
 ElevatorCommand - present command for the elevator, what is the next floor the elevator should go
+
 ElevatorCommands - container for multiple commands. this class also contains method that helps to calcualte the current position of the elevator
+
 Ex1 - simple main that running the algo
 
 ##### Offline algo:
